@@ -8,4 +8,5 @@ export const connectDb = mongoose
   .connect(process.env.MONGO_URI, {
     dbName: "API",
   })
-  .then(console.log("Db started"));
+  .then(c => console.log(`Db started with ${c.connection.host}`))
+  .catch(e => console.log(e));
