@@ -56,4 +56,5 @@ export const logout = (req, res) => {
     .json({
       success: true,
     });
+  res.clearCookie("token", { path: "/" });
 };
